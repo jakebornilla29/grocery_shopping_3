@@ -16,7 +16,7 @@ class Login extends CI_Controller
 
         $result = $this->Login_model->checkuser($username,$password);
         $u_id = '';
-        foreach ($result as $row){
+       foreach ($result as $row){
             $u_id = $row->u_id;
             $fname = $row->fname;
             $lname = $row->lname;

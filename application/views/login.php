@@ -36,6 +36,11 @@
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <a href="<?php echo base_url('Welcome/register') ?>" class="btn btn-lg btn-primary btn-block">Register</a>
                         </div>
+                        <div>
+                            <center>
+                                 <a href="<?php echo base_url('Welcome/forgot_password') ?>" class="btn btn-lg btn-btn-link">Forgot Password</a>
+                            </center>
+                        </div>
                     </div>
                 </fieldset>
             <?php
