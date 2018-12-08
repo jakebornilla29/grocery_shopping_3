@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 29, 2018 at 06:39 AM
+-- Generation Time: Dec 08, 2018 at 02:04 PM
 -- Server version: 10.1.35-MariaDB
 -- PHP Version: 7.2.9
 
@@ -123,6 +123,37 @@ INSERT INTO `purchase_history` (`ph_id`, `oh`, `p_name`, `p_price`, `p_qty`, `u_
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tokens`
+--
+
+CREATE TABLE `tokens` (
+  `id` int(11) NOT NULL,
+  `token` varchar(255) NOT NULL,
+  `user_id` int(10) NOT NULL,
+  `created` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tokens`
+--
+
+INSERT INTO `tokens` (`id`, `token`, `user_id`, `created`) VALUES
+(1, '4454fa8fa7b66da907b8c1250d136a', 4, '2012-02-18'),
+(2, 'f17b3eeabb033d6cf92f5fca315281', 4, '2012-02-18'),
+(3, '388e650738d3ae41e733ba08277799', 4, '2012-02-18'),
+(4, '5ef76f62b41c819593ec587fc5c078', 4, '2012-02-18'),
+(5, '9e75fe0be96de6463406cbc000ca3e', 4, '2012-02-18'),
+(6, 'ff9dd22b37cffdeeffeb7f3e2a705a', 4, '2012-02-18'),
+(7, '197354ba4fbb6d61d0973a9dd88353', 4, '2012-02-18'),
+(8, '6958a33e5088a6353e9d4bb8055eb0', 4, '2012-02-18'),
+(9, 'ec26df71c18bd542f262c72d99e287', 4, '2012-02-18'),
+(10, '8c5d4f0ec4a3179b0e49b8e5b31a4e', 4, '2012-03-18'),
+(11, '8bc8b9ba5683c13d390328ca0abf85', 4, '2012-03-18'),
+(12, 'c2e6570af33657b00f2ccc8a57b25c', 4, '2012-03-18');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -173,6 +204,12 @@ ALTER TABLE `purchase_history`
   ADD PRIMARY KEY (`ph_id`);
 
 --
+-- Indexes for table `tokens`
+--
+ALTER TABLE `tokens`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -187,6 +224,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `purchase_history`
   MODIFY `ph_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `tokens`
+--
+ALTER TABLE `tokens`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

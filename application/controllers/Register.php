@@ -8,7 +8,7 @@ class Register extends CI_Controller
         $this->form_validation->set_rules('username', 'Username', 'required|is_unique[users.username]');
         $this->form_validation->set_rules('password', 'Password', 'required');
         $this->form_validation->set_rules('password_conf', 'Password Confirmation', 'required|matches[password]');
-        $this->form_validation->set_rules('email', 'Email', 'required');
+        $this->form_validation->set_rules('email', 'Email', 'required|is_unique[users.email]');
 
         if ($this->form_validation->run() == FALSE)
         {
