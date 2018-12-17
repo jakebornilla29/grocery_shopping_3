@@ -20,6 +20,11 @@ class Welcome extends CI_Controller {
         redirect('Shop');
     }
 
+    public function dish()
+    {
+        redirect('Dish');
+    }
+
     public function cart()
     {
         if(isset($_SESSION['email'])){
@@ -41,6 +46,12 @@ class Welcome extends CI_Controller {
     {
         $id = $_GET['id'];
         redirect('Single?id='.$id);
+    }
+
+    public function single2()
+    {
+        $id = $_GET['id'];
+        redirect('Single2?id='.$id);
     }
 
     public function login()
@@ -70,6 +81,22 @@ class Welcome extends CI_Controller {
         }
     }
 
+    public function add_dish()
+    {
+        if(isset($_SESSION['status'])){
+            if($_SESSION['status'] == 'admin'){
+                $this->load->view('add_dish');
+            }
+        }
+        else{
+            ?>
+            <script>
+                alert('Access Denied');
+                window.location = "<?php echo base_url() ?>";
+            </script>
+            <?php
+        }
+    }
     public function orders()
     {
         if(isset($_SESSION['status'])){
@@ -97,7 +124,6 @@ class Welcome extends CI_Controller {
 
         $this->load->view('reciept',$data);
     }
-
     public function forgot_password()
     {
         $this->form_validation->set_rules('email','Email','required|valid_email');

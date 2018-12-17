@@ -48,6 +48,7 @@
                 <ul class="nav navbar-nav">
                     <li class=""><a href="<?php echo base_url('Welcome') ?>">Home</a></li>
                     <li><a href="<?php echo base_url('Welcome/shop') ?>">Shop page</a></li>
+                    <li><a href="<?php echo base_url('Welcome/dish') ?>">Dish page</a></li>
                 </ul>
                 <?php
                 if(isset($_SESSION['email'])) {
