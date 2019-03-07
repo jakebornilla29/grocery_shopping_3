@@ -40,7 +40,9 @@
                 <ul class="nav navbar-nav">
                     <li class=""><a href="<?php echo base_url('Welcome') ?>">Home</a></li>
                     <li class=""><a href="<?php echo base_url('Admin') ?>">View Products</a></li>
+                    <li class=""><a href="<?php echo base_url('Admin2') ?>">View Dish</a></li>
                     <li><a href="<?php echo base_url('Welcome/add_pro') ?>">Add Product</a></li>
+                    <li><a href="<?php echo base_url('Welcome/add_dish') ?>">Add Recipe</a></li>
                     <li><a href="<?php echo base_url('Admin/order') ?>">Orders</a></li>
                 </ul>
 

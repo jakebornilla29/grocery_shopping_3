@@ -22,6 +22,10 @@
     <select class=' add_to_cart_button' name="cat" id="">
         <option value="Fruits">Fruits</option>
         <option value="Vegetables">Vegetables</option>
+        <option value="Meat">Meat</option>
+        <option value="Spices">Spices</option>
+        <option value="Sauces">Sauces</option>
+        <option value="oil">Oil</option>
     </select>
     <button class="add_to_cart_button" >Submit</button>
     <?php
